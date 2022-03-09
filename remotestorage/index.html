@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>remoteStorage Hello World</title>
+        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    </head>
+
+    <body>
+        <h1>remoteStorage Hello World</h1>
+
+        <div id="loading">
+            <p>Loading...</p>
+        </div>
+
+        <div id="auth-guest" hidden>
+            <p>Hi there!</p>
+            <p>
+                This page is a showcase of a simple <a href="https://remotestorage.io" target="_blank">remoteStorage application</a>
+                built using JavaScript, CSS and HTML. You can look at the source code and learn how to use it in
+                <a href="https://github.com/0dataapp/hello/tree/main/remotestorage" target="_blank">the repository</a>.
+            </p>
+
+            <button id="login-button" type="button" onclick="login()">Log in with remoteStorage</button>
+
+            <p>
+                <small>You can get a remoteStorage account for free from <a href="https://5apps.com/storage/">5apps</a> or <a href="https://remotestorage.io/servers">host your own</a>.</small>
+            </p>
+        </div>
+
+        <div id="auth-user" hidden>
+            <p>Hello, <span id="username"></span>!</p>
+            <button id="logout-button" type="button" onclick="logout()">Log out</button>
+
+            <h2>Your tasks</h2>
+            <ul id="tasks"></ul>
+            <button type="button" onclick="createTask()">Create new task</button>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/remotestoragejs@2.0.0-beta.1/release/remotestorage.min.js"></script>
+        <script src="remotestorage-module.js"></script>
+        <script src="remotestorage.js"></script>
+        <script src="main.js"></script>
+
+        <small>Or, go back to <a href="../">the homepage</a>.</small>
+    </body>
+
+</html>

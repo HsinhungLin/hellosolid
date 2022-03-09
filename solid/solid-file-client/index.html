@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Solid Hello World (solid-file-client)</title>
+        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    </head>
+
+    <body>
+        <h1>Solid Hello World<br><small>(solid-file-client)</small></h1>
+
+        <div id="loading">
+            <p>Loading...</p>
+        </div>
+
+        <div id="auth-guest" hidden>
+            <p>Hi there!</p>
+            <p>
+                This page is a showcase of a simple <a href="https://solidproject.org/" target="_blank">Solid application</a>
+                built using the <a href="https://github.com/jeff-zucker/solid-file-client" target="_blank">solid-file-client</a> library. You can look at the source code and learn how to use it in
+                <a href="https://github.com/0dataapp/hello/tree/main/solid/solid-file-client" target="_blank">the repository</a>.
+            </p>
+
+            <p>If you want to see other examples, you can find them here: <a href="../">Solid Hello World Examples</a>.</p>
+
+            <button id="login-button" type="button" onclick="login()">Log in with Solid</button>
+
+            <p>
+                <small>If you don't have one, you can <a href="https://solidproject.org/users/get-a-pod">get a Solid Pod</a>.</small>
+            </p>
+        </div>
+
+        <div id="auth-user" hidden>
+            <p>Hello, <span id="username"></span>!</p>
+            <button id="logout-button" type="button" onclick="logout()">Log out</button>
+
+            <h2>Your tasks</h2>
+            <ul id="tasks"></ul>
+            <button type="button" onclick="createTask()">Create new task</button>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@inrupt/solid-client-authn-browser@1.11.2/dist/solid-client-authn.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/solid-file-client@1.2.5/dist/window/solid-file-client.bundle.js"></script>
+        <script src="./solid.js"></script>
+        <script src="./main.js"></script>
+
+        <small>Or, go back to <a href="../../">the homepage</a>.</small>
+    </body>
+
+</html>
